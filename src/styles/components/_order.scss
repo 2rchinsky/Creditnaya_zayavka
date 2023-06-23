@@ -1,0 +1,177 @@
+.order {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    //background-repeat: no-repeat;
+    //background-position: 95% 100%;
+    //background-size: 295px 539px;
+    //padding-bottom: 140px;
+    //
+    //@media (max-width: $breakpoint991) {
+    //    padding-bottom: 5px;
+    //    background-position: 100% 100%;
+    //}
+    //
+    //@media (max-width: $breakpoint669) {
+    //    background-size: 203px 367px;
+    //}
+
+    .order_text {
+        max-width: 670px;
+        width: 100%;
+
+        @media (max-width: $breakpoint991) {
+            margin-bottom: 70px;
+        }
+
+        @media (max-width: $breakpoint768) {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        @media (max-width: $breakpoint669) {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 40px;
+            line-height: 48px;
+            color: $primaryColor;
+            max-width: 495px;
+            width: 100%;
+            margin: 50px 0;
+
+            @media (max-width: $breakpoint991) {
+                margin-top: 30px;
+                font-size: 36px;
+                line-height: 44px;
+                width: 450px;
+            }
+
+            @media (max-width: $breakpoint669) {
+                margin: 0;
+                max-width: 272px;
+                font-size: 28px;
+                line-height: 34px;
+            }
+        }
+
+        .middle_text {
+            display: flex;
+            justify-content: space-between;
+            margin: 50px 0;
+
+            @media (max-width: $breakpoint991) {
+                flex-direction: column;
+            }
+
+            .middle_text_element {
+                max-width: 148px;
+
+                p {
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: $secondaryColor;
+                    margin-bottom: 20px;
+
+                    @media (max-width: $breakpoint991) {
+                        max-width: 300px;
+                        margin-bottom: 10px;
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+
+                    @media (max-width: $breakpoint669) {
+                        max-width: 200px;
+                        margin-bottom: 10px;
+                        font-size: 14px;
+                        line-height: 17px;
+                    }
+                }
+
+                p:nth-child(2) {
+                    font-size: 40px;
+                    line-height: 48px;
+                    color: $primaryColor;
+
+                    @media (max-width: $breakpoint991) {
+                        font-size: 36px;
+                        line-height: 44px;
+                    }
+
+                    @media (max-width: $breakpoint669) {
+                        font-size: 22px;
+                        line-height: 26px;
+                    }
+                }
+            }
+
+            .middle_text_element:nth-child(1) {
+                max-width: 291px;
+            }
+
+            .middle_text_element:nth-child(3) {
+                @media (max-width: $breakpoint669) {
+                    max-width: 141px;
+                }
+            }
+        }
+    }
+
+    .order_img {
+        max-width: 295px;
+        max-height: 539px;
+
+        @media (max-width: $breakpoint991) {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        @media (max-width: $breakpoint669) {
+            display: flex;
+            justify-content: right;
+            z-index: -1;
+        }
+
+        picture {
+
+            @media (max-width: $breakpoint768) {
+                width: 90%;
+            }
+
+            @media (max-width: $breakpoint669) {
+                width: 70%;
+            }
+        }
+    }
+}
+
+.order_img_completion {
+    max-width: 220px;
+    max-height: 539px;
+
+    @media (max-width: $breakpoint991) {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    @media (max-width: $breakpoint669) {
+        display: flex;
+        justify-content: right;
+        z-index: -1;
+    }
+
+    picture {
+
+        @media (max-width: $breakpoint768) {
+            width: 90%;
+        }
+
+        @media (max-width: $breakpoint669) {
+            width: 70%;
+        }
+    }
+}

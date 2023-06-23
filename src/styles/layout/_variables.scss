@@ -1,0 +1,36 @@
+// colors
+$primaryColor: #0066FF;
+$secondaryColor: #373737;
+$btnColor: #F14056;
+$btnHover: #d41128;
+
+// breakpoints
+$breakpoint991: 991px;
+$breakpoint768: 768px;
+$breakpoint669: 669px;
+
+.btn {
+    padding: 20px 55px;
+    border-radius: 33px;
+    background-color: $btnColor;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    flex-shrink: 0;
+    text-align: center;
+
+    @media (max-width: $breakpoint669) {
+        padding: 23px 65px;
+        display: block;
+    }
+
+    &:hover {
+        transition: 0.3s all ease;
+        background-color: #FF324B;
+    }
+
+    &:focus {
+        transition: 0.3s all ease;
+        background-color: #FF0F2C
+    }
+}

@@ -1,0 +1,22 @@
+.container-width {
+    .wrapper_success {
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        img {
+            width: 60px;
+        }
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+
+            @media (max-width: $breakpoint669) {
+                font-size: 30px;
+            }
+        }
+    }
+}

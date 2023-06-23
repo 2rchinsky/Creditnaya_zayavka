@@ -1,0 +1,403 @@
+.form_block {
+  margin: 40px 0 0;
+
+
+  .form_title {
+    color: $primaryColor;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+
+    @media (max-width: $breakpoint991) {
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @media (max-width: $breakpoint669) {
+      font-size: 27px;
+      line-height: 33px;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .form_body {
+      margin: 40px auto;
+      margin-bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      max-width: 730px;
+      width: 100%;
+      flex-wrap: wrap;
+
+      @media (max-width: $breakpoint669) {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        margin-bottom: 0;
+      }
+
+      // @media (max-width: $breakpoint669) {
+      //     flex-direction: ;
+      // }
+
+      // .form_section {
+      //     display: flex;
+      //     flex-direction: column;
+      //     max-width: 350px;
+      //     width: 100%;
+
+      //     @media (max-width: $breakpoint991) {
+      //         max-width: 326px;
+      //     }
+
+      // @media (max-width: $breakpoint768) {
+      //     max-width: 280px;
+      // }
+
+      .form_item {
+        margin-bottom: 60px;
+        position: relative;
+        max-width: 350px;
+        width: 100%;
+
+        @media (max-width: $breakpoint991) {
+          max-width: 326px;
+        }
+
+        @media (max-width: $breakpoint768) {
+          max-width: 280px;
+        }
+
+        @media (max-width: $breakpoint669) {
+          max-width: 100%;
+          margin-bottom: 40px;
+        }
+
+        .range-loan-sum,
+        .range-loan-term {
+          position: relative;
+
+          .form_input {
+            border-bottom: 0;
+
+            &:hover,
+            &:active,
+            &:focus {
+              border-bottom: 0;
+            }
+
+            margin-bottom: 0;
+          }
+
+          //&:after, &:before{
+          //  content: "";
+          //  position: absolute;
+          //  top:0;
+          //  left: 0;
+          //  height: 70px;
+          //  width: 1px;
+          //  background-color: rgba(55, 55, 55, 0.7);
+          //}
+          //&:before {
+          //  left: auto;
+          //  right: 0;
+          //}
+        }
+
+        .form_input {
+          width: 100%;
+          height: 60px;
+          padding-left: 20px;
+          border: 1px solid rgba(55, 55, 55, 0.7);
+          font-size: 16px;
+          transition: 0.3s ease all;
+          position: relative;
+          -moz-appearance: textfield;
+
+          /* Chrome, Safari, Edge, Opera */
+          &::-webkit-outer-spin-button,
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          @media (max-width: $breakpoint768) {
+            font-size: 15px;
+          }
+        }
+
+        .form_input:hover {
+          border: 1px solid #373737;
+        }
+
+        .form_input:focus {
+          border: 2px solid #373737;
+        }
+
+        .form_label {
+          position: absolute;
+          left: 22px;
+          top: -8px;
+          padding: 0 3px;
+          z-index: 5;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 18px;
+          letter-spacing: 0em;
+          background-color: white;
+          color: rgba(55, 55, 55, 0.7);
+        }
+
+        .form_label+.form_input:focus {
+          color: #373737;
+        }
+
+        .form_label:focus {
+          color: #373737;
+        }
+
+        .wrap_slider {
+          position: absolute;
+          top: 50px;
+          max-width: 100%;
+          width: 100%;
+          z-index: 6;
+        }
+
+        .form_slider {
+          cursor: grabbing;
+          margin-top: 0;
+          margin-left: 0;
+          width: 100%;
+
+          @media (max-width: $breakpoint669) {
+            max-width: 100%;
+          }
+
+        }
+
+        .selectize-input {
+          height: 60px;
+          padding: 0;
+        }
+
+        #select-reg-selectized {
+          width: 100%;
+          height: 100%;
+          font-size: 16px;
+          padding-left: 12px !important;
+
+          @media (max-width: $breakpoint991) {
+            font-size: 15px;
+          }
+        }
+
+        .selectize-input {
+          border: 1px solid rgba(55, 55, 55, 0.7);
+          padding: 8px 8px;
+          display: inline-block;
+          width: 100%;
+          overflow: hidden;
+          position: relative;
+          z-index: 1;
+          box-sizing: border-box;
+
+        }
+
+        .range_labels {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 7px;
+          -moz-user-select: none;
+          -khtml-user-select: none;
+          user-select: none;
+        }
+
+        .form_svg {
+          width: 17.5px;
+          height: 19px;
+          z-index: 5;
+          background-image: url(/src/images/calendar.svg);
+          position: absolute;
+          cursor: pointer;
+          right: 20px;
+          top: 20px;
+        }
+
+        ._error {
+          border: 1px solid #F44336;
+          color: #F44336;
+
+          &::placeholder {
+            color: red !important;
+          }
+
+          &>*::placeholder {
+            color: red;
+          }
+        }
+
+        ._errorLabel {
+          color: #F44336;
+        }
+
+        .helper-text {
+          display: none;
+          color: #F44336;
+          font-size: 12px;
+          position: absolute;
+          z-index: 10;
+          top: 60px;
+          left: 0;
+        }
+
+        .show {
+          display: inline;
+        }
+      }
+
+      .form_item:nth-child(1) {
+        max-width: 100%;
+      }
+
+      .form_item:nth-child(2) {
+        max-width: 100%;
+      }
+
+      .form_item:nth-child(3) {
+        margin: 0;
+
+        @media (max-width: $breakpoint669) {
+          margin-bottom: 40px;
+        }
+      }
+
+      .form_item:nth-child(1) {
+        margin-bottom: 36px;
+      }
+
+      .form_item:nth-child(2) {
+        margin-bottom: 36px;
+      }
+
+      .form_item:nth-child(6) {
+        @media (max-width: $breakpoint669) {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+
+  .form_checkbox {
+    max-width: 730px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    @media (max-width: $breakpoint669) {
+      margin-bottom: 45px;
+    }
+
+    .helper-text {
+      display: none;
+      color: #F44336;
+      font-size: 12px;
+      position: absolute;
+      z-index: 10;
+      bottom: -17px;
+
+      &.show {
+        display: inline;
+      }
+
+      &.last {
+        bottom: -22px;
+
+        @media (max-width: $breakpoint669) {
+          bottom: -32px;
+        }
+      }
+    }
+
+    .checkbox {
+      display: flex;
+      margin: 0 auto;
+      position: relative;
+
+      .checkbox_label {
+        font-size: 14px;
+        line-height: 18px;
+        margin-left: 30px;
+        display: inline;
+        align-items: center;
+        position: relative;
+
+        @media (max-width: $breakpoint991) {
+          font-size: 13px;
+          line-height: 15px;
+        }
+      }
+
+      .checkbox_label::before {
+        content: "";
+        cursor: pointer;
+        // flex: 0 0 18px;
+        height: 18px;
+        width: 18px;
+        background-color: white;
+        border-radius: 3px;
+        border: 1px solid #373737;
+        margin-right: 10px;
+        position: absolute;
+        left: -30px;
+        top: 7px;
+      }
+
+      .checkbox_label::after {
+        transition: all 0.3s ease;
+        content: url(/src/images/check.svg);
+        cursor: pointer;
+        width: 16px;
+        height: 12px;
+        position: absolute;
+        left: -29px;
+        top: 10px;
+        transform: scale(0);
+      }
+
+      .checkbox_input:checked+.checkbox_label::after {
+        transform: scale(1);
+      }
+
+      .checkbox_input {
+        display: none;
+      }
+    }
+  }
+
+  .form_button {
+    max-width: 255px;
+    width: 100%;
+    padding: 20px 60px;
+    border: none;
+    border-radius: 33px;
+    background: #F14056;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $btnHover;
+      transition: 0.3s all ease;
+    }
+
+    @media (max-width: $breakpoint669) {
+      padding: 23px 68px;
+      display: block;
+      max-width: 100%;
+    }
+  }
+}

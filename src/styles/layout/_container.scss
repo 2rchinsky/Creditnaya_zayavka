@@ -1,0 +1,16 @@
+.container-width {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    @media (max-width: $breakpoint991) {
+        max-width: 95%;
+        // padding: 0 70px;
+    }
+
+    @media (max-width: $breakpoint669) {
+        padding: 0 25px;
+        max-width: 100%;
+    }
+}

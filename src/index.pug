@@ -1,0 +1,368 @@
+include pug/libs/_libs
+html(lang='en')
+    include pug/_head
+    body
+        .container-width
+            .header 
+                .logo 
+                    img(src="/images/logo.svg", alt="LOGO" width="50px" height="50px")
+                .header_text
+                    h1 Кредит онлайн
+                    p Одна заявка во все банки вашего региона
+            .order 
+                .order_text 
+                    h2 Получите деньги наличными или на карту
+                    .middle_text 
+                        .middle_text_element
+                            p Автоматическое одобрение кредитной заявки
+                            p до 1 000 000 ₽
+                        .middle_text_element
+                            p C процентной ставкой от
+                            p 5.9 %
+                        .middle_text_element
+                            p Максимальный срок до
+                            p 60 мес.
+                    a.btn(href='#form') Заполнить заявку
+                .order_img
+                    picture
+                        source(type='image/webp' srcset='/images/girl.webp')
+                        source(type='image/jpeg' srcset='/images/girl.png')
+                        img(src='/images/girl.png' alt='')
+
+        .line 
+            .container-width
+                .line_block
+                    p Наличные или деньги на карту в любой момент
+                    img(src="/images/money.svg", alt="money" width="50px" height="50px")
+                .line_block
+                    p Без подтверждения дохода, справок и поручителей
+                    img(src="/images/paper.svg", alt="paper" width="50px" height="50px")
+                .line_block
+                    p Быстрое решение по кредиту до 5 минут
+                    img.clock(src="/images/clock.svg", alt="clock" width="50px" height="50px")
+        .container-width
+            .form_block
+                h3.form_title Получите деньги прямо сейчас
+                form#form(action="#" data-page-success="[[#9.alias]]" data-page-error="[[#10.alias]]")
+                    .form_body
+                        .form_item
+                            label.form_label#loan-sum-label(for="loan-sum") Сумма
+                            .range-loan-sum
+                                //input.form_input#input-loan-sum
+
+                                input.form_input#loan-sum(type='number' name="loan-sum" value='60000' min='60000' max='1000000' step='5000')
+                                div.wrap_slider
+                                    input.form_slider(type='range' value='60000' min='60000' max='1000000' step='5000' aria-labelledby='loan-sum-label'  )
+
+                                .range_labels
+                                    p 60 тыс
+                                    p 380 тыс
+                                    p 700 тыс
+                                    p 1 млн
+                        .form_item
+                            label.form_label#loan-term-label(for="loan-term") Срок
+                            .range-loan-term
+                                input.form_input#loan-term(type='number' name='loan-term' value='6' min='6' max='60' step='1')
+                                div.wrap_slider
+                                    input.form_slider(type='range' value='6' min='6' max='60' step='1' aria-labelledby='loan-term-label')
+                                .range_labels
+                                    p 6 мес
+                                    p 23 мес
+                                    p 40 мес
+                                    p 60 мес
+                        .form_item
+                            label.form_label(for="fio_input") ФИО
+                            input.form_input.suggestions-input._req._name#fio_input(placeholder="Введите ФИО" type="text" name="name")
+                            span.helper-text#fio *Поле не должно содержать латиницу и цифр
+                        .form_item
+                            label.form_label(for="fio_input") Email
+                            input.form_input._req#email(placeholder="Введите Email" type="text" name="name")
+                            //- label.form_label(for="select-reg") Регион
+                            //- select#select-reg._req(placeholder="Выберите регион" name="region")
+                            //-     <option value="">Выберите регион</option>
+                            //-     <option value="Москва и Московская область">Москва и Московская область</option>
+                            //-     <option value="Санкт-Петербург и Ленинградская область">Санкт-Петербург и Ленинградская область</option>
+                            //-     <option value="Алтайский край">Алтайский край</option>
+                            //-     <option value="Амурская область">Амурская область</option>
+                            //-     <option value="Архангельская область">Архангельская область</option>
+                            //-     <option value="Астраханская область">Астраханская область</option>
+                            //-     <option value="Белгородская область">Белгородская область</option>
+                            //-     <option value="Брянская область">Брянская область</option>
+                            //-     <option value="Владимирская область">Владимирская область</option>
+                            //-     <option value="Волгоградская область">Волгоградская область</option>
+                            //-     <option value="Вологодская область">Вологодская область</option>
+                            //-     <option value="Воронежская область">Воронежская область</option>
+                            //-     <option value="Еврейская автономная область">Еврейская автономная область</option>
+                            //-     <option value="Забайкальский край">Забайкальский край</option>
+                            //-     <option value="Ивановская область">Ивановская область</option>
+                            //-     <option value="Иркутская область">Иркутская область</option>
+                            //-     <option value="Калининградская область">Калининградская область</option>
+                            //-     <option value="Калужская область">Калужская область</option>
+                            //-     <option value="Камчатский край">Камчатский край</option>
+                            //-     <option value="Карачаево-Черкесская Республика">Карачаево-Черкесская Республика</option>
+                            //-     <option value="Кемеровская область">Кемеровская область</option>
+                            //-     <option value="Кировская область">Кировская область</option>
+                            //-     <option value="Костромская область">Костромская область</option>
+                            //-     <option value="Краснодарский край">Краснодарский край</option>
+                            //-     <option value="Красноярский край">Красноярский край</option>
+                            //-     <option value="Курганская область">Курганская область</option>
+                            //-     <option value="Курская область">Курская область</option>
+                            //-     //- <option value="Ленинградская область">Ленинградская область</option>
+                            //-     <option value="Липецкая область">Липецкая область</option>
+                            //-     <option value="Магаданская область">Магаданская область</option>
+                            //-     <option value="Мурманская область">Мурманская область</option>
+                            //-     <option value="Ненецкий автономный округ">Ненецкий автономный округ</option>
+                            //-     <option value="Нижегородская область">Нижегородская область</option>
+                            //-     <option value="Новгородская область">Новгородская область</option>
+                            //-     <option value="Новосибирская область">Новосибирская область</option>
+                            //-     <option value="Омская область">Омская область</option>
+                            //-     <option value="Оренбургская область">Оренбургская область</option>
+                            //-     <option value="Орловская область">Орловская область</option>
+                            //-     <option value="Пензенская область">Пензенская область</option>
+                            //-     <option value="Пермский край">Пермский край</option>
+                            //-     <option value="Приморский край">Приморский край</option>
+                            //-     <option value="Псковская область">Псковская область</option>
+                            //-     <option value="Республика Адыгея">Республика Адыгея</option>
+                            //-     <option value="Республика Алтай">Республика Алтай</option>
+                            //-     <option value="Республика Башкортостан">Республика Башкортостан</option>
+                            //-     <option value="Республика Бурятия">Республика Бурятия</option>
+                            //-     //- <option value="Республика Дагестан">Республика Дагестан</option>
+                            //-     //- <option value="Республика Ингушетия">Республика Ингушетия</option>
+                            //-     <option value="Республика Калмыкия">Республика Калмыкия</option>
+                            //-     <option value="Республика Карелия">Республика Карелия</option>
+                            //-     <option value="Республика Коми">Республика Коми</option>
+                            //-     //- <option value="Республика Крым">Республика Крым</option>
+                            //-     <option value="Республика Марий Эл">Республика Марий Эл</option>
+                            //-     <option value="Республика Мордовия">Республика Мордовия</option>
+                            //-     <option value="Республика Саха (Якутия)">Республика Саха (Якутия)</option>
+                            //-     //- <option value="Республика Северная Осетия — Алания">Республика Северная Осетия — Алания</option>
+                            //-     <option value="Республика Татарстан (Татарстан)">Республика Татарстан (Татарстан)</option>
+                            //-     //- <option value="Республика Тыва">Республика Тыва</option>
+                            //-     <option value="Республика Хакасия">Республика Хакасия</option>
+                            //-     <option value="Ростовская область">Ростовская область</option>
+                            //-     <option value="Рязанская область">Рязанская область</option>
+                            //-     <option value="Самарская область">Самарская область</option>
+                            //-     <option value="Саратовская область">Саратовская область</option>
+                            //-     <option value="Сахалинская область">Сахалинская область</option>
+                            //-     <option value="Свердловская область">Свердловская область</option>
+                            //-     //- <option value="Севастополь">Севастополь</option>
+                            //-     <option value="Смоленская область">Смоленская область</option>
+                            //-     <option value="Ставропольский край">Ставропольский край</option>
+                            //-     <option value="Тамбовская область">Тамбовская область</option>
+                            //-     <option value="Тверская область">Тверская область</option>
+                            //-     <option value="Томская область">Томская область</option>
+                            //-     <option value="Тульская область">Тульская область</option>
+                            //-     <option value="Тюменская область">Тюменская область</option>
+                            //-     <option value="Удмуртская Республика">Удмуртская Республика</option>
+                            //-     <option value="Ульяновская область">Ульяновская область</option>
+                            //-     <option value="Хабаровский край">Хабаровский край</option>
+                            //-     <option value="Ханты-Мансийский автономный округ — Югра">Ханты-Мансийский автономный округ — Югра</option>
+                            //-     <option value="Челябинская область">Челябинская область</option>
+                            //-     //- <option value="Чеченская Республика">Чеченская Республика</option>
+                            //-     <option value="Чувашская Республика — Чувашия">Чувашская Республика — Чувашия</option>
+                            //-     <option value="Чукотский автономный округ">Чукотский автономный округ</option>
+                            //-     <option value="Ямало-Ненецкий автономный округ">Ямало-Ненецкий автономный округ</option>
+                            //-     <option value="Ярославская область">Ярославская область</option>
+                            span.helper-text *Ведите Email
+                        .form_item
+                            label.form_label(for="date") Дата рождения
+                            input.form_input._req._date#date(type="text" name="date" placeholder="dd/mm/yyyy")
+                            span.helper-text *Введите корректную дату
+                            .form_svg#form_svg
+                        .form_item
+                            label.form_label(for="phone") Контактный телефон
+                            input.form_input._req._phone(type="tel" id="phone" name="phone" placeholder="+7(000)-000-00-00")
+                            span.helper-text *Введите корректный телефон
+                    .form_checkbox
+                        .checkbox.form_item
+                            input.checkbox_input#formAgreement._req(type="checkbox" name="agreement" checked="checked")
+                            label.checkbox_label(for="formAgreement") Я соглашаюсь с <a href="#" id="open_popup1">условиями</a> и даю согласие на <a href="#" id="open_popup2">согласие на обработку</a> и использование моих персональных данных, и разрешаю сделать запрос в бюро кредитных историй
+                            span.helper-text.last Чтобы продолжить, необходимо ваше согласие
+                    button.form_button(type="submit") Получить деньги
+            .form_block_sec 
+                h3.form_title Получите деньги прямо сейчас
+                form#form_sec.form_sec
+                    .form_body
+                        .form_passport
+                            .form_passport_title 
+                                p Паспортные данные
+                            .form_inputs_pass
+                                .form_item_pass
+                                    label.form_label_sec(for="series") Серия и номер паспорта
+                                    input.form_input_sec(type="text" id="series" name="series" placeholder="Введите серию и номер")
+                                    span.helper_sec *Проверьте правильность ввода
+                                .form_item_pass
+                                    label.form_label_sec(for="date-mask") Дата получения
+                                    input.form_input_sec(type="text" id="date-mask" name="date")
+                                    span.helper_sec *Введите корректную дату
+                                .form_item_pass
+                                    label.form_label_sec(for="subdivision") Код подразделения
+                                    input.form_input_sec(type="text" id="subdivision" name="subdivision" placeholder="Введите код")
+                                    span.helper_sec *Проверьте правильность ввода
+                                .form_item_pass
+                                    label.form_label_sec(for="birthplace") Место рождения
+                                    input.form_input_sec(type="text" id="birthplace" name="birthplacen" placeholder="Как в паспорте")
+                                    span.helper_sec *Проверьте правильность ввода
+                                .form_item_pass_long
+                                    label.form_label_sec(for="issuance") Кем выдан паспорт
+                                    input.form_input_sec(type="text" id="issuance" placeholder="Кем выдан")
+                                    span.helper_sec *Проверьте правильность ввода
+                                .form_item_pass_long
+                                    label.form_label_sec(for="address") Адрес регистрации
+                                    input.form_input_sec(type="text" id="address" placeholder="Введите полный адрес")
+                                    span.helper_sec *Введите корректный адрес
+                                .form_item_pass_long
+                                    .form_item_gender
+                                        label.form_label_sec(for="gender") Пол
+                                        select#gender_id(placeholder="Выберите пол" name="gender")
+                                            <option value="">Выберите пол</option>
+                                            <option value="male">Мужчина</option>
+                                            <option value="famele">Женщина</option>
+                                    span.helper_sec *Выберите пол
+                        .button_case
+                            button.form_send(type="submit") Получить деньги
+            .form_block_end
+                h3.form_title Получите деньги прямо сейчас
+                form#form_end.form_end
+                    .form_body
+                        .form_ending
+                            .form_ending_title 
+                                p Паспортные данные
+                            .form_inputs_end
+                                .form_item_end
+                                    .form_item_select
+                                        label.form_label_end(for="occupation_id") Занятость
+                                        select(placeholder="Выберите занятость" id="occupation_id" name="occupation")
+                                            <option value="">Выберите занятость</option>
+                                            <option value="worker">Работаю</option>
+                                            <option value="unemployed">Безработный</option>
+                                            <option value="pensioner">Пенсионер</option>
+                                            <option value="student">Студент</option>
+                                            <option value="student_correspondence">Студент-заочник</option>
+                                            <option value="entrepreneur_person">Предприниматель</option>
+                                            <option value="entrepreneur_business">Предпринимательский бизнес</option>
+                                            <option value="contract_worker">Военнослужащий по контракту </option>
+                                            <option value="regular_service">военнослужащий срочник </option>
+                                        span.helper_end *Выберите занятость
+                                .form_item_end
+                                    .form_item_select
+                                        label.form_label_end(for="education_id") Образование
+                                        select(placeholder="Выберите образование" id="education_id" name="education")
+                                            <option value="">Выберите образование</option>
+                                            <option value="primary">Начальное или неполное среднее</option>
+                                            <option value="secondary">Среднее</option>
+                                            <option value="vocational">Среднеспециальное</option>
+                                            <option value="incomplete">Неполное высшее</option>
+                                            <option value="higher">Высшее</option>
+                                            <option value="higher_two_plus">Два и более высших</option>
+                                            <option value="academic">Ученая степень</option>
+                                        span.helper_end *Выберите образование
+                                .form_item_end
+                                    .form_item_select
+                                        label.form_label_end(for="family_status_id") Семейное положение
+                                        select(placeholder="Семейное положение" id="family_status_id" name="family_status")
+                                            <option value="">Семейное положение</option>
+                                            <option value="married">В браке</option>
+                                            <option value="single">Свободен / свободна</option>
+                                            <option value="divorced">Разведен / разведена</option>
+                                            <option value="widowed">Вдовец / вдова</option>
+                                            <option value="civil">Гражданский брак</option>
+                                            <option value="married_single">Женат / Замужем, но живет отдельно</option>
+                                        span.helper_end *Выберите семейное положение
+                                .form_item_end
+                                    .form_item_select
+                                        label.form_label_end(for="children_num") Колличество детей
+                                        select(placeholder="Выберите колличество" id="children_num" name="children_num")
+                                            <option value="">Семейное положение</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        span.helper_end *Выберите колличество детей
+                                .form_item_end
+                                    label.form_label_end(for="work_income") Зарплата с учетом премий
+                                    input.form_input_end(type="text" id="work_income" placeholder="Введите сумму")
+                                    span.helper_end *Введите корректную сумму
+                                .form_item_end 
+                                    label.form_label_end(for="business_income") Доход от собственного бизнеса
+                                    input.form_input_end(type="text" id="business_income" placeholder="Введите сумму")
+                                    span.helper_end *Введите корректную сумму
+                                .form_item_end
+                                    label.form_label_end(for="pension_income") Пенсия или регулярные выплаты
+                                    input.form_input_end(type="text" id="pension_income" placeholder="Введите сумму")
+                                    span.helper_end *Введите корректную сумму
+                                .form_item_end
+                                    label.form_label_end(for="other_income") Доходы супруга/супруги
+                                    input.form_input_end(type="text" id="other_income" placeholder="Введите сумму")
+                                    span.helper_end *Введите корректную сумму
+                                .form_item_end_long
+                                    label.form_label_end(for="party") Место работы
+                                    input.form_input_end(type="text" id="party" name="work" placeholder="Место работы")
+                                    span.helper_end *Проверьте правильность ввода
+                        .button_case
+                            button.form_send_end(type="submit") Получить деньги
+            .rules 
+                .header_text
+                    h3 Правила и терминология
+                .main_text 
+                    p Услуги на проекте Моменткредит (momentkredit.ru) оказывает ИП Середов Денис Петрович ОГРН 310740127300028, ИНН 740101593601, юридический и физический адрес: Краснодарский Край, г. Сочи, ул Голенева 36. Проект осуществляет только подбор кредитов и микрокредитов между лицом желающим взять кредит, и кредитными учреждениями, которые имеют право осуществлять профессиональную деятельность по предоставлению потребительских кредитов. Проект не является финансовым учреждением, банком или кредитором, и не несёт ответственности за любые заключенные договоры кредитования или условия. Сервис «Моменткредит» использует куки для предоставления услуг. Условия хранения или доступа к куки Вы можете настроить в своём браузере. Сервис предназначен для лиц старше 18 лет. Расчет в калькуляторах на сайте основан на среднем показателе процентной ставки кредитов. Не является публичной офертой. Расчет может отличаться от реальной процентной ставки, которая будет предложена вам финансовыми организациями. Если вы несогласны с данной политикой, прекратите пользование сайтом momentkredit.ru.
+                    p Услуга по подбору кредита бесплатна для клиента! Мы не берем денег со своих клиентов. Денежные средства за подбор кредита просят только мошенники. Будьте внимательны!
+                    p ИП Середов Денис Петрович ЯВЛЯЕТСЯ ОПЕРАТОРОМ ПЕРСОНАЛЬНЫХ ДАННЫХ (Приказ № 154 от 01.06.2020)
+                    p 
+                        a(href="completion.html") test
+                    p Потребительский кредит (заем) - денежные средства, предоставленные кредитором заемщику на основании кредитного договора, договора займа, в том числе с использованием электронных средств платежа, в целях, не связанных с осуществлением предпринимательской деятельности. Регулируется Федеральным законом № 353-ФЗ от 21.12.2013 «О потребительском кредите (займе)».
+                    p Основные условия: Срок кредита от 61 дня до 5 лет, процентная ставка от 5,9 % годовых до 24.9 % годовых, возраст заемщика с 18 до 68 лет, дополнительных комиссий и сборов нет.
+                    p Пример расчета кредита: вы берёте 300 000 рублей на 36 месяцев с процентной ставкой 12,9% в год. Переплата за весь срок составит 63 375 рублей. Итого вы возвращаете 363 375 рублей. Кредитор обязан предоставить заемщику полную информацию об условиях предоставления, использования и возврата потребительского кредита (займа)!
+                    p Некоторые из наших банков-партнеров:
+                    ul 
+                        li ПАО «Сбербанк России», генеральная лицензия № 1481
+                        li ПАО КБ «Восточный экспресс банк», генеральная лицензия № 1460
+                        li ПАО «Банк Уралсиб», генеральная лицензия № 30
+                        li ПАО «Московский Кредитный банк», генеральная лицензия 1978
+                        li АО КБ «Ситибанк», генеральная лицензия № 2257
+                        li ПАО Банк «Финансовая Корпорация Открытие», генеральная лицензия № 2209
+                        li Банк ВТБ (ПАО), генеральная лицензия № 1000
+                    p Последствия не выплаты заемных денег<br> В случае невозвращения в условленный срок суммы кредита или суммы процентов за пользование заёмными средствами кредитор вынуждено начислит штраф за просрочку платежа. Большинство кредиторов идут на уступки и дают три дополнительных рабочих дня для оплаты. Они предусмотрены на случай, к примеру, если банковский перевод занял больше времени, чем обычно. Однако, в случае неполучения от Вас какой-либо реакции в течение продолжительного времени, будет начислен штраф за просрочку срока погашения размером в среднем 0,10% от первоначальной суммы для займов, 0,03% от суммы задолженности в среднем для потребительских кредитов и кредитных карт. При несоблюдении Вами условий по погашению кредитов и займов, данные о Вас могут быть переданы в реестр должников, а задолженность - коллекторскому агентству для взыскания долга.
+                    p О всех приближающихся сроках платежа кредитор своевременно информирует Вас по СМС или электронной почте. Рекомендуем Вам вносить платеж в день получения данных напоминаний. Погашая задолженность в срок, Вы формируете хорошую кредитную историю, что повышает Ваши шансы в дальнейшем получить кредит на более выгодных условиях.
+                    p Сайт НЕ является представительством кредитной организации. Мы не выдаем кредитов и займов, а только информируем о возможных вариантах.
+        .footer 
+            .container-width
+                .footer_item 
+                    p Политика обработки персональных данных
+                    p.bot Согласие на обработку персональных данных
+                .footer_item
+                    p creditonline2022@yandex.ru
+                    p Cвидетельство о регистрации ИП
+        .popup_bg#popup1
+            .popup
+                .close_popup
+                    img(src="/images/close.svg", alt="X")
+                .wrap_content_popup
+                    .popup_header
+                        p Условия направления физическими лицами заявлений в электронном виде в информационно-телекоммуникационной сети «Интернет» на сайте АО «АЛЬФА-БАНК» или посредством услуги «Альфа-Мобайл» в целях получения услуг АО «АЛЬФА-БАНК»
+                    .popup_text
+                        p Гражданин Российской Федерации (далее — «Заявитель»), направляющий в АО Альфа⁠-⁠Банк (Генеральная лицензия Банка России № 1326, адрес места нахождения: 107 078, г. Москва, ул. Каланчевская, д. 27, Телефонный центр «Альфа-Консультант»: +7 495 788 88 78 для звонков из Москвы и Московской области, 8 800 200 00 00 для звонков с мобильных телефонов и стационарных телефонов, зарегистрированных в регионах) (далее — «Банк») заявление в электронном виде на сайте Банка или посредством услуги «Альфа-Мобайл» (далее — «Заявление») в целях получения услуги Банка, тем самым понимает, принимает и подтверждает следующее:
+        .popup_bg_secondary#popup2
+            .popup_secondary
+                .close_popup
+                    img(src="/images/close.svg", alt="X")
+                .wrap_content_popup
+                    .popup_header
+                        p Условия  физическими лицами заявлений в электронном виде в информационно-телекоммуникационной сети «Интернет» на сайте АО «АЛЬФА-БАНК» или посредством услуги «Альфа-Мобайл» в целях получения услуг АО «АЛЬФА-БАНК»
+                    .popup_text
+                        p Гражданин Российской Федерации (далее — «Заявитель»), направляющий в АО Альфа⁠-⁠Банк (Генеральная лицензия Банка России № 1326, адрес места нахождения: 107 078, г. Москва, ул. Каланчевская, д. 27, Телефонный центр «Альфа-Консультант»: +7 495 788 88 78 для звонков из Москвы и Московской области, 8 800 200 00 00 для звонков с мобильных телефонов и стационарных телефонов, зарегистрированных в регионах) (далее — «Банк») заявление в электронном виде на сайте Банка или посредством услуги «Альфа-Мобайл» (далее — «Заявление») в целях получения услуги Банка, тем самым понимает, принимает и подтверждает следующее:
+
+        #wrap_loader
+            .loader_ring
+                div
+                div
+                div
+                div
+
+
